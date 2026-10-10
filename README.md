@@ -1,4 +1,4 @@
-# DSA-LeetCode
+# DSA-Weekly History from College
 ## DSA College Assignments
 ### Day 1: 
 1D Array Operations
