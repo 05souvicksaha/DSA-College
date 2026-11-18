@@ -1,7 +1,3 @@
-/*
- * DISCRIPTION : Convert Infix to Postfix
- * CREATED ON : July 21,2018
- */
 #include<stdio.h>
 #include<ctype.h>
 
@@ -41,7 +37,7 @@ void convert(char in[40],char post[40])
 			post[j++]=in[i];
 		if(in[i]=='(')
 			push(&s1,in[i]);
-		if(in[i]=='+'||in[i]=='-'||in[i]=='/'||in[i]=='*')
+		if(in[i]=='+'||in[i]=='-'||in[i]=='/'||in[i]=='*' || in[i] == '^')
 		{
 			if(s1.top!=-1)
 			{
@@ -74,7 +70,7 @@ void convert(char in[40],char post[40])
 
 int priority(char c)
 {
-	if(c=='$')
+	if(c=='~' || c== '^')
 		return 3;
 	if(c=='*'||c=='/')
 		return 2;
@@ -93,7 +89,7 @@ void push(stack *s,char opr)
 
 char pop(stack *s)
 {
-	//pop elemnet from stack
+	//pop element from stack
 	if (s->top==-1)
 	{
 		return 0;
@@ -121,5 +117,10 @@ A+B-(C*D/E)
 POSTFIX EXPRESSION
 AB+CD*E/-
 --------------------------------
+ENTER INFIX EXPRESSION
+A+(B*C-(D/E^F)*G)*H
 
+POSTFIX EXPRESSION
+try to check
+--------------------------------
 */
