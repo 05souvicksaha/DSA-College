@@ -10,3 +10,5 @@ Sparse Matrices
 Sorting Algorithms
 ### Day 5:
 Linked Lists
+### Day 6:
+Stack
